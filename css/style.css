@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* init */
+*{
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  color: #333; 
+  font-family: 'Noto Sans KR', sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+}
+ul, li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+
+/* layout */
+
+/* header부분 */
+header{
+  width: 100vw;
+  height: 79.6vh;
+  overflow: hidden;
+}
+/* 상단 탑메뉴 부분 */
+#gnb{
+  width: 100vw;
+  height: 7vh;
+  background-color: #fff;
+}
+.dropBox{
+  width: 300vw;
+  height: 25vh;
+  background-color: #fff;
+  /* top: -45vw; */
+  top: 0;
+  left: -100vw;
+  /* opacity: 0; */
+  z-index: -1;
+}
+#topMenu{
+  width: 70vw;
+  height: 7vh;
+}
+
+#topMenu ul:hover li{
+  display: block;
+}
+#topMenu li{
+  transition: 0.5s;
+  display: none;
+}
+#topMenu li:hover{
+  color: #55A36A;
+}
+header nav{
+  width: 30.2vw;
+  height: 7vh;
+}
+header nav ul{
+  width: 6.25vw;
+  line-height: 7vh;
+  /* background-color: #ffae41; */
+}
+header nav li{
+  width: 6.25vw;
+  line-height: 4vh;
+  font-size: 1.125rem;
+}
+#gnbIcon{
+  width: 8.3vw;
+  height: 7vh;
+  margin-left: 2vw;
+}
+/* 메뉴 호버시 효고ㅏ */
+.mainMenu>a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.mainMenu>a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.mainMenu>a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: rgba(255, 235, 133, 0.3);
+  z-index: 0;
+  transition: transform .3s ease;
+}
+.mainMenu>a {
+  position: relative;
+  font-size: 1.25rem;
+}
+
+
+
+/* 메인 텍스트 */
+#mainTextWraper{
+  width: 100vw;
+  height: 47vh;
+}
+#mainText{
+  width: 40.5vw;
+  height: 31.8vh;
+  top: 23.8vh;
+  left: 14.4vw;
+  transition: all 1.5s;
+}
+#mainBackground article:nth-child(1){
+  width: 50px;
+  height: 50px;
+  top: 22.9vh;
+  left: 12.6vw;
+  z-index: -2;
+}
+#mainBackground article:nth-child(2){
+  width: 78px;
+  height: 78px;
+  top: 27.7vh;
+  left: 29.6vw;
+  z-index: -2;
+}
+#mainText h1{
+  transition: all 1s;
+}
+#mainViewmore{
+  width: 8.6vw;
+  height: 3.7vh;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+#mainViewmore:hover{
+  width: 5vw;
+  height: 3.7vh;
+  border-radius: 20px;
+}
+#mainViewmore li{
+  width: 15vw;
+  height: 3.7vh;
+}
+
+/* 메인 동영상 */
+#mainVisual{
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+  overflow: hidden;
+  z-index: -1;
+}
+#mainVisual video{
+  opacity: 0.8;
+}
+#videoScrollItems{
+  width: 100vw;
+  height: 94.4vh;
+  z-index: 4;
+}
+#videoScrollItems article:nth-child(1){
+  width: 21.6vw;
+  height: 100vh;
+  background-color: #fff;
+  transition: all 2s;
+}
+#videoScrollItems article:nth-child(2){
+  width: 21.6vw;
+  height: 100vh;
+  background-color: #fff;
+  transition: all 2s;
+
+}
+
+
+/* section 부분 시작 */
+
+/* 섹션 1 - 일러스트 부분 */
+#section-1{
+  width: 100vw;
+  height: 84vh;
+  padding: 4vh;
+}
+#section-1-picture{
+  width: 30.4vw;
+  height: 55.8vh;
+  top:0;
+}
+#section-1 ul{
+  width: 1080px;
+  height: 74px;
+  bottom: -15vh;
+}
+#section-1 ul li{
+  width: 350px;
+  height: 74px;
+  border-radius: 40px;
+  background-color: #fff;
+  box-shadow: #e4e2e1 0 5px 23px;
+}
+#section-1-content{
+  width: 56.6vw;
+  height: 35vh;
+  top: -12vh;
+}
+/* 섹션 2 - Product */
+#section-2{
+  width: 100vw;
+  height: 74vh;
+  background-color: #F9F5E9;
+}
+#section-2-textCon{
+  width: 32.8vw;
+  height: 30vh;
+}
+#section-2-img{
+  bottom: 40vh;
+  right: 30vw;
+}
+#section-2-img img:nth-child(2){
+  top: 8vh;
+}
+#section-2-img img:nth-child(3){
+  top: 28vh;
+  left: -3.2vw;
+}
+#section2-viewmore{
+  width: 8.6vw;
+  height: 3.7vh;
+  background-color: #F7AC74;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+#section2-viewmore:hover{
+  background-color: #55A36A;
+  cursor: pointer;
+}
+#productSlide{
+  width: 67.5vw;
+  height: 55.5vh;
+}
+/* 섹션 3 - 인기 제품 부분 */
+#section-3{
+  width: 100vw;
+  height: 65.1vh;
+}
+#section3-textBox{
+  width: 20.8vw;
+  height: 28.5vh;
+}
+#section-3-viewmore{
+  width: 7.1vw;
+  height: 3vh;
+  border-radius: 16px;
+  border: 2px #4DBB88 solid;
+  position: relative;
+  transition: all 0.5s;
+}
+#section-3-viewmore:hover{
+  width: 3vw;
+}
+#section-3-viewmore li:nth-child(1){
+  width: 10vw;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+#section-3-viewmore li:nth-child(2){
+  position: absolute;
+  top: -2px;
+  right: -20px;
+}
+#section-3-ImgWrap{
+  width: 50.4vw;
+  height: 30vh;
+  margin-left: 2vw;
+}
+#section-3-ImgWrap img{
+  transition: all 0.5s;
+}
+#section-3-ImgWrap img:hover{
+  transform: translateY(-2vw);
+}
+/* 섹션 4 - 티 클래스 배너 부분 */
+#section-4{
+  width: 100vw;
+  height: 27.7vh;
+}
+
+/* 섹션 5 - 오프라인 스토어 부분 */
+#section-5{
+  width: 100vw;
+  height: 73.7vh;
+  background-color: #F7F8FB;
+}
+#section-5 article{
+  width: 220px;
+  height: 322px;
+  background-color: #A09A8A;
+  padding: 2vh;
+}
+#section-5 article p{
+  transition: 0.5s;
+}
+#section-5 article p:hover{
+  color: #e4e2e1;
+  cursor: pointer;
+}
+#section-5-title{
+  margin-left: -5vw;
+}
+
+
+/* footer */
+footer{
+  width: 100vw;
+  height: 33.3vh;
+  background-color: #F7AC74;
+}
+footer ul{
+  width: 33.3vw;
+  line-height: 20px;
+}
+footer>div:nth-child(1){
+  width: 33.4vw;
+  height: 22.4vh;
+}
+footer>div:nth-child(2){
+  width: 33.4vw;
+  height: 24.8vh;
+}
+
+/* 정리 */
+.bakco{
+  background-color: aqua;
+}
+.posi-re{
+  position: relative;
+}
+.posi-ab{
+  position: absolute;
+}
+.posi-ab-00{
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.posi-ab-tr00{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.display-none{
+  display: none;
+}
+.flex-sb{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-sa{
+  display: flex;
+  justify-content: space-around;
+}
+.flex-cen{
+  display: flex;
+  justify-content: center;
+}
+.flex-item-cen{
+  display: flex;
+  align-items: center;
+}
+.flex-str{
+  display: flex;
+  justify-content: start;
+}
+.flex-end{
+  display: flex;
+  justify-content: end;
+}
+.flex-column{
+  flex-direction: column;
+}
+.ali-items-cen{
+  align-items: center;
+}
+.ali-items-end{
+  align-items: flex-end;
+}
+.ma-0-a{
+  margin: 0 auto;
+}
+.txt-center{
+  text-align: center;
+}
+
+.font-16px{
+  font-size: 1rem;
+}
+.font-18px{
+  font-size: 1.125rem;
+}
+.font-20px{
+  font-size: 1.25rem;
+}
+.font-22px{
+  font-size: 1.375rem;
+}
+.font-24px{
+  font-size: 1.5rem;
+}
+.font-26px{
+  font-size: 1.625rem;
+}
+.font-28px{
+  font-size: 1.75rem;
+}
+.font-32px{
+  font-size: 2rem;
+}
+.font-36px{
+  font-size: 2.25rem;
+}
+.font-40px{
+  font-size: 2.5rem;
+}
+.font-50px{
+  font-size: 3.125rem;
+}
+.font-54px{
+  font-size: 3.375rem;
+}
+.font-66px{
+  font-size: 4.125rem;
+}
+
+.letter-spacing-20px{
+  letter-spacing: 20px;
+}
+.font-wei-100{
+  font-weight: 100;
+}
+.font-wei-300{
+  font-weight: 300;
+}
+.font-bold{
+  font-weight: bold;
+}
+.border-bo-1px-ebebeb{
+  border-bottom: 1px solid #ebebeb;
+}
+.back-color-orange{
+  background-color: #F7AC74;
+}
+.back-color-yellow{
+  background-color: #FFEB85;
+}
+.color-ffae41{
+  color: #ffae41;
+}
+.color-orange{
+  color: #F7AC74;
+}
+.color-yellow{
+  color: #FFEB85;
+}
+.color-fff{
+  color: #FFf;
+}
+.color-yellow{
+  color: #55A36A;
+}
+.border-redi-50{
+  border-radius: 50%;
+}
+.margin-1vw{
+  margin: 0 1vw;
+}
+.margin-2vw{
+  margin: 0 2vw;
+}
+.margin-left-2vw{
+  margin-left: 2vw;
+}
+.margin-top-2vw{
+  margin-top: 2vw;
+}
+.margin-top-1vw{
+  margin-top: 1vw;
+}
+.font-family-mon{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.border-fff{
+  border-right: 2px solid #fff;
+}
+
+
+
+
+
+
+/* 반응형 */
+@media (max-width: 520px){
+  body{
+    overflow-x: hidden;
+  }
+  /* header 부분 */
+  /* 메뉴 */
+  #topMenu{
+    display: none;
+  }
+  #m-menu{
+    display: block;
+  }
+  #gnb{
+    display: flex;
+    justify-content: space-between;
+    padding: 6vw;
+  }
+  /* 메인 텍스트와 비디오 */
+  #mainText{
+    width: 70vw;
+  }
+  #mainText h1{
+  font-size: 3rem;
+  }
+  #mainViewmore{
+    width: 30vw;
+  }
+  #mainViewmore li{
+    width: 40vw;
+  }
+  #mainViewmore:hover{
+    width: 10vw;
+    height: 3.7vh;
+    border-radius: 20px;
+  }
+  #mainVisual video{
+    transform: translate(-50%,0);
+  }
+
+  /* section1 */
+  
+  #section-1 p{
+    letter-spacing: normal;
+  }
+  #section-1-content{
+    left: -10vw;
+  }
+
+  /* 섹션 2 - Product */
+#section-2{
+  height: 130vh;
+  flex-direction: column;
+}
+#productTextLine{
+  transform: rotate(90deg);
+}
+#section-2-textCon{
+  width: 80vw;
+  height: 30vh;
+}
+#section-2-textCon h2{
+  font-size: 2rem;
+}
+#section-2-textCon h6{
+  font-size: 1rem;
+}
+#section-2-img{
+  transform: scale(0.7);
+  bottom: 65vh;
+  right: 50vw;
+}
+#section2-viewmore{
+  width: 30vw;
+}
+#productSlide{
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+#productNextIcon{
+  display: none;
+}
+
+/* 섹션 3 - 인기 제품 부분 */
+#section-3{
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#section3-textBox{
+  width: 80vw;
+  height: 28.5vh;
+}
+#section-3-viewmore{
+  width: 25vw;
+}
+#section-3-viewmore:hover{
+  width: 5vw;
+}
+#section-3-viewmore li:nth-child(1){
+  width: 20vw;
+}
+#section-3-ImgWrap{
+  width: 50.4vw;
+  height: 30vh;
+  align-items: center;
+  margin: -10vh 0 0 -10vw;
+}
+
+/* 섹션 4 - 티 클래스 배너 부분 */
+#section-4{
+  display: none;
+}
+
+/* 섹션 5 - 오프라인 스토어 부분 */
+#section-5{
+  width: 100vw;
+  height: 100vh;
+  background-color: #F7F8FB;
+}
+#section-5 article{
+  width: 100vw;
+  height: 20vh;
+  background-color: #A09A8A;
+  padding: 2vh;
+}
+#section-5-title{
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+}
+#section-5-title h1{
+  font-size: 2.5rem;
+}
+#section5Ccon{
+  flex-direction: column;
+}
+#section5Ccon img{
+  width: 100vw;
+}
+
+/* footer */
+footer{
+  flex-direction: column;
+}
+footer ul{
+  width: 90vw;
+  line-height: 20px;
+}
+footer>div:nth-child(1){
+  width: 90vw;
+  height: 40vh;
+  justify-content: space-around;
+}
+footer>div:nth-child(2){
+  width: 90vw;
+  height: 10vh;
+  justify-content: space-around;
+  align-items: center;
+}
+footer>div:nth-child(2) a{
+  display: none;
+}
+
+
+}
